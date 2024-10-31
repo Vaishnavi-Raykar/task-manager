@@ -199,7 +199,7 @@ export default function Home() {
   return (
 <div className="container mx-auto p-8 bg-gradient-to-br from-indigo-200 via-indigo-300 to-blue-400 rounded-xl shadow-2xl" style={{ perspective: '1000px' }}>
   <h1 className="text-5xl font-bold mb-12 text-center text-slate-900 drop-shadow-md tracking-wide transform transition-transform duration-500 hover:rotate-x-3 hover:rotate-y-3">
-    Priority-Based Todo List
+    Task Manager
   </h1>
 
   {/* Add Todo Form */}
