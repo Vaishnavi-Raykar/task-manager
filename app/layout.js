@@ -1,0 +1,32 @@
+import localFont from "next/font/local";
+import { CopilotKit } from "@copilotkit/react-core";
+import "@copilotkit/react-ui/styles.css";
+import "./globals.css";
+
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+  weight: "100 900",
+});
+const geistMono = localFont({
+  src: "./fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
+});
+
+export const metadata = {
+  title: "Todo Prioritization",
+  description: "Powered by CopilotKit",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+          <CopilotKit runtimeUrl="/api/copilotkit">{children}</CopilotKit>
+      </body>
+    </html>
+  );
+}
