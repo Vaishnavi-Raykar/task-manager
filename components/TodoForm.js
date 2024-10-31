@@ -28,7 +28,7 @@ export default function TodoForm({ addTodo }) {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="p-4 border rounded-md shadow-md w-1/2 h-auto">
       <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700">Title</label>
+        <label className="block text-sm font-medium text-gray-500">Title</label>
         <input
           type="text"
           {...register("title")}
@@ -37,14 +37,14 @@ export default function TodoForm({ addTodo }) {
         {errors.title && <p className="text-red-500">{errors.title.message}</p>}
       </div>
       <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700">Description</label>
+        <label className="block text-sm font-medium text-gray-500">Description</label>
         <textarea
           {...register("description")}
           className="mt-1 block w-full border rounded-md p-2"
         />
       </div>
       <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700">Deadline</label>
+        <label className="block text-sm font-medium text-gray-500">Deadline</label>
         <input
           type="datetime-local"  
           {...register("deadline")}
@@ -54,7 +54,7 @@ export default function TodoForm({ addTodo }) {
       </div>
 
       <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700">Priority</label>
+        <label className="block text-sm font-medium text-gray-500">Priority</label>
         <select {...register("priority")} className="mt-1 block w-full border rounded-md p-2">
           <option value="Low">Low</option>
           <option value="Medium">Medium</option>
